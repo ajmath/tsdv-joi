@@ -1,0 +1,22 @@
+import { Reference, RenameOptions, Schema, SchemaMap } from "joi";
+export declare function And<TClass>(peer: keyof TClass, ...peers: (keyof TClass)[]): PropertyDecorator;
+export declare function Assert(ref: string | Reference, schema: Schema, message?: string): PropertyDecorator;
+export declare type KeysSchemaMap<TClass> = {
+    [P in keyof TClass]: Schema | SchemaMap | (Schema | SchemaMap)[];
+};
+export declare function Keys<TClass>(schema?: KeysSchemaMap<TClass>): PropertyDecorator;
+export declare function Length(limit: number): PropertyDecorator;
+export declare function Max(limit: number): PropertyDecorator;
+export declare function Min(limit: number): PropertyDecorator;
+export declare function Nand<TClass>(peer: keyof TClass, ...peers: (keyof TClass)[]): PropertyDecorator;
+export declare function ObjectSchema(schema?: SchemaMap): PropertyDecorator;
+export declare function OptionalKeys<TClass>(...children: (keyof TClass)[]): PropertyDecorator;
+export declare function Or<TClass>(peer: keyof TClass, ...peers: (keyof TClass)[]): PropertyDecorator;
+export declare function Pattern(regex: RegExp, schema: Schema): PropertyDecorator;
+export declare function Rename(from: string, to: string, options?: RenameOptions): PropertyDecorator;
+export declare function RequiredKeys<TClass>(...children: (keyof TClass)[]): PropertyDecorator;
+export declare function Type(constructor: Function, name?: string): PropertyDecorator;
+export declare function Unknown(allow?: boolean): PropertyDecorator;
+export declare function With<TClass>(key: keyof TClass, peers: (keyof TClass)[]): PropertyDecorator;
+export declare function Without<TClass>(key: keyof TClass, peers: (keyof TClass)[]): PropertyDecorator;
+export declare function Xor<TClass>(peer: keyof TClass, ...peers: (keyof TClass)[]): PropertyDecorator;

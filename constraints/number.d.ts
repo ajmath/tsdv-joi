@@ -1,0 +1,11 @@
+import { Reference } from "joi";
+export declare function Greater(limit: number | Reference): PropertyDecorator;
+export declare function Integer(): PropertyDecorator;
+export declare function Less(limit: number | Reference): PropertyDecorator;
+export declare function Max(limit: number | Reference): PropertyDecorator;
+export declare function Min(limit: number | Reference): PropertyDecorator;
+export declare function Multiple(base: number): PropertyDecorator;
+export declare function Negative(): PropertyDecorator;
+export declare function NumberSchema(): PropertyDecorator;
+export declare function Positive(): PropertyDecorator;
+export declare function Precision(limit: number): PropertyDecorator;
